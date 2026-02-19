@@ -26,6 +26,6 @@ exercice5_while: exercice5_while.c
 	$(CC) $(CFLAGS) exercice5_while.c -o exercice5_while
 
 clean:
-	rm -f exercice1 exercice2 exercice3 exercice4_parite exercice4_valeur_absolue exercice5_for exercice5_while
+	rm -f test exercice2 exercice3 exercice4_parite exercice4_valeur_absolue exercice5_for exercice5_while
 
 .PHONY: all clean
