@@ -1,6 +1,6 @@
-.
-└── TPC
-    └── TP1
+    .
+    └── TPC
+      └── TP1
         ├── exercice2.c
         ├── exercice3.c
         ├── exercice4_parite.c
@@ -10,5 +10,7 @@
         ├── Makefile
         ├── test.c
         └── TP2PremierspasenC.pdf
+        
+        3 directories, 9 files
 
-3 directories, 9 files
+
