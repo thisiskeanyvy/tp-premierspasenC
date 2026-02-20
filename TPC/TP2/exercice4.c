@@ -5,13 +5,23 @@ struct Point {
     int y;
 };
 
-int main(void) {
+void initialiser_point(struct Point *p, int x, int y)
+{
+    p->x = x;
+    p->y = y;
+}
+
+void afficher_point(struct Point *p)
+{
+    printf("Point p1 : x = %d, y = %d\n", p->x, p->y);
+}
+
+int main(void)
+{
     struct Point p1;
 
-    p1.x = 10;
-    p1.y = 20;
-
-    printf("Point p1 : x = %d, y = %d\n", p1.x, p1.y);
+    initialiser_point(&p1, 10, 20);
+    afficher_point(&p1);
 
     return 0;
 }

@@ -8,24 +8,34 @@ struct Etudiant {
     float moyenne;
 };
 
-int main(void) {
-    struct Etudiant e1;
-
+void saisir_etudiant(struct Etudiant *e)
+{
     printf("Saisie des informations de l'étudiant :\n");
     printf("  Nom     : ");
-    scanf("%49s", e1.nom);
+    scanf("%49s", e->nom);
     printf("  Prénom  : ");
-    scanf("%49s", e1.prenom);
+    scanf("%49s", e->prenom);
     printf("  Age     : ");
-    scanf("%d", &e1.age);
+    scanf("%d", &e->age);
     printf("  Moyenne : ");
-    scanf("%f", &e1.moyenne);
+    scanf("%f", &e->moyenne);
+}
 
+void afficher_etudiant(struct Etudiant *e)
+{
     printf("\n--- Informations de l'étudiant ---\n");
-    printf("Nom     : %s\n", e1.nom);
-    printf("Prénom  : %s\n", e1.prenom);
-    printf("Age     : %d ans\n", e1.age);
-    printf("Moyenne : %.2f\n", e1.moyenne);
+    printf("Nom     : %s\n", e->nom);
+    printf("Prénom  : %s\n", e->prenom);
+    printf("Age     : %d ans\n", e->age);
+    printf("Moyenne : %.2f\n", e->moyenne);
+}
+
+int main(void)
+{
+    struct Etudiant e1;
+
+    saisir_etudiant(&e1);
+    afficher_etudiant(&e1);
 
     printf("\n--- Test strcpy(e1.nom, \"Dupont\") ---\n");
     strcpy(e1.nom, "Dupont");
