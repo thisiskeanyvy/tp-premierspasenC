@@ -1,4 +1,3 @@
-# TP 2 - Compilation de tous les exercices
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99
 
